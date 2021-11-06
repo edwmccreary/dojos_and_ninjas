@@ -1,0 +1,15 @@
+.flex-container {
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+}
+
+.col-a {
+    width: 200px;
+    min-height: 400px;
+}
+
+.col-b {
+    width: 300px;
+    min-height: 400px;
+}

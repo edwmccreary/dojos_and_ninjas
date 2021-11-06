@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Ninja</title>
+</head>
+<body>
+    <h1>New Ninja</h1><br>
+    <form action="/add_ninja" method="post">
+        <table>
+            <tr>
+                <td>Dojo:</td>
+                <td>
+                    <select name="dojo_id">
+                        <option hidden disabled selected value> select a dojo </option>
+                        {% for dojo in dojos %}
+                        <option value="{{dojo.id}}">{{dojo.name}}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td>
+                    <input type="text" name="first_name">
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>
+                    <input type="text" name="last_name">
+                </td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td>
+                    <input type="number" name="age">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <button type="submit">Create</button>
+    </form>
+    <br>
+    <a href="/dojos">Home</a>
+</body>
+</html>
